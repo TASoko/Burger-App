@@ -1,15 +1,3 @@
-<div class="jumbotron jumbotron-fluid">
-  <div class="container">
-    <h1 class="display-4">Eat Da Burger</h1>
-  </div>
-</div>
-
-<div class="input-group mb-3">
-  <div class="input-group-prepend">
-    <span class="input-group-text submit" id="inputGroup-sizing-default">Submit</span>
-  </div>
-  <input type="text" class="form-control" aria-label="Default" aria-describedby="inputGroup-sizing-default">
-</div>
 
 <li>
 	{{burger_name}}
@@ -20,3 +8,57 @@
 
 	<button class="delete-burger" data-id="{{this.id}}">Delete Order!</button>
 </li>
+   <div class="jumbotron jumbotron-fluid">
+      <div class="container">
+        <div class="row">
+          <div class="col-4"></div>
+          <div class="col-4">
+        <h1 class="display-4">Eat Da Burger!</h1>
+      </div>
+    </div>
+    </div>
+    </div>
+    <!--first card to show eat later-->
+    <div class="container main">
+      <div class="row">
+        <div class="col-4">
+          <div class="card" style="width: 18rem;">
+            <ul class="list-group list-group-flush">
+              <li class="list-group-item">Cras justo odio <button type="button" class="btn btn-outline-danger">Devour</button></li>
+              <li class="list-group-item">Dapibus ac facilisis in</li>
+              <li class="list-group-item">Vestibulum at eros</li>
+            </ul>
+          </div>
+        </div>
+       <!--to submit the burger choice-->
+
+        <div class="col-4">
+          <div class="input-group mb-3">
+            <div class="input-group-prepend">
+              <span
+                class="input-group-text submit"
+                id="inputGroup-sizing-default"
+                >Submit</span
+              >
+            </div>
+            <input
+              type="text"
+              class="form-control"
+              aria-label="Default"
+              aria-describedby="inputGroup-sizing-default"
+            />
+            <p>Enter a burger you would like to eat then submit</p>
+           </div>
+        </div>
+            <!--card to devour-->
+            <div class="col-4">
+              <div class="card" style="width: 18rem;">
+                <ul class="list-group list-group-flush">
+                  <li class="list-group-item">Cras justo odio</li>
+                  <li class="list-group-item">Dapibus ac facilisis in</li>
+                  <li class="list-group-item">Vestibulum at eros</li>
+                </ul>
+              </div>
+            </div>
+      </div>
+    </div>
