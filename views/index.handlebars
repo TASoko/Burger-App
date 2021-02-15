@@ -29,10 +29,10 @@
         <div class="col-4">
             <div class="input-group mb-3">
                 <div class="input-group-prepend">
-                    <span class="input-group-text submit" id="inputGroup-sizing-default">Submit</span>
+                    <span class="input-group-text submit" id="inputGroup-sizing-default" type="submit">Submit</span>
                 </div>
                 <input type="text" class="form-control" aria-label="Default"
-                    aria-describedby="inputGroup-sizing-default" />
+                    aria-describedby="inputGroup-sizing-default" name="burger_name" id="devoured">
                 <p>Enter a burger you would like to eat then submit</p>
             </div>
         </div>
@@ -43,7 +43,7 @@
                     <li class="list-group-item">
                         {{#each burgers}}
                         {{#if devoured}}
-                        {{> burgers/burger-block devoured=false}}
+                        {{> burgers/burger-blockD devoured=false}}
                         {{/if}}
                         {{/each}}
                     </li>
