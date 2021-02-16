@@ -13,11 +13,11 @@ document.addEventListener('DOMContentLoaded', (event) => {
         button.addEventListener('click', (e) => {
           // Grabs the id of the element that goes by the name, "id"
           const id = e.target.getAttribute('data-id');
-          const newDevour = e.target.getAttribute('data-newdevoured');
   
           const newDevourState = {
-            devoured: newDevour,
+            devoured: true,
           };
+          console.log(newDevourState);
   
           fetch(`/api/burgers/${id}`, {
             method: 'PUT',
@@ -32,7 +32,7 @@ document.addEventListener('DOMContentLoaded', (event) => {
             // Check that the response is all good
             // Reload the page so the user can see the new quote
             if (response.ok) {
-              console.log(`changed devoured to: ${newDevour}`);
+              console.log(`changed devoured to true`);
               location.reload('/');
             } else {
               alert('something went wrong!');
@@ -43,18 +43,16 @@ document.addEventListener('DOMContentLoaded', (event) => {
     }
   
     // CREATE
-    const createBurgerBtn = document.getElementById('new-burger');
-  
-    if (createBurgerBtn) {
-      createBurgerBtn.addEventListener('submit', (e) => {
+    const createBurgerBtn = document.getElementById('submit');
+  console.log(createBurgerBtn)
+      createBurgerBtn.addEventListener('click', (e) => {
         e.preventDefault();
   
         // Grabs the value of the textarea that goes by the name, "quote"
         const newBurger = {
           name: document.getElementById('new-burger').value.trim(),
-        //   devoured: document.getElementById('sleepy').checked,
         };
-  
+        console.log(newBurger);
         // Send POST request to create a new quote
         fetch('/api/burgers', {
           method: 'POST',
@@ -74,7 +72,7 @@ document.addEventListener('DOMContentLoaded', (event) => {
           location.reload();
         });
       });
-    }
+    
   
     // DELETE
     const deleteBurgerBtns = document.querySelectorAll('.delete-burger');
