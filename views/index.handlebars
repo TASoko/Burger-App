@@ -1,23 +1,27 @@
-<div class="jumbotron jumbotron-fluid">
-    <div class="container">
-        <div class="row">
-            <div class="col-4"></div>
-            <div class="col-4">
-                <h1 class="display-4">Eat Da Burger!</h1>
-            </div>
+<div class="container">
+    <div class="row">
+        <div class="col-4"></div>
+        <div class="col-5">
+            <h1 class="display-4 title">Eat Da Burger!</h1>
+            <img src="https://media.giphy.com/media/WBTUlyKBVlTTa/giphy.gif" alt="gif of a burger assembling"
+                width="300" height="200" class="gif">
         </div>
     </div>
 </div>
+</div>
 <!--first card to show eat later-->
+<br><br>
 <div class="container main">
     <div class="row">
         <div class="col-4">
-            <div class="card" style="width: 18rem;">
+            <div class="card" style="width: 23rem;">
+                <h2 class="card-title">Burgers to Eat Later</h2>
                 <ul class="list-group list-group-flush">
                     <li class="list-group-item">
                         {{#each burgers}}
                         {{#unless devoured}}
                         {{> burgers/burger-block}}
+                        <br>
                         {{/unless}}
                         {{/each}}
                     </li>
@@ -38,12 +42,14 @@
         </div>
         <!--card to devour-->
         <div class="col-4">
-            <div class="card" style="width: 18rem;">
+            <div class="card" style="width: 23rem;">
+                <h2 class="card-title">Devoured Burgers</h2>
                 <ul class="list-group list-group-flush">
                     <li class="list-group-item">
                         {{#each burgers}}
                         {{#if devoured}}
                         {{> burgers/burger-block}}
+                        <br>
                         {{/if}}
                         {{/each}}
                     </li>

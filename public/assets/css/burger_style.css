@@ -1,3 +1,27 @@
-.display-4 {
+.title {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color: 	#355E3B;
+    font-size: larger;
+    margin-top: 50px;
+};
+.main {
+    padding-top: 40px;
+};
+.gif {
+    padding-bottom: 40px;
     
+};
+#submit{
+    padding: 40px;
+    margin-top: 50px;
+}
+.card-title{
+    color: 	#355E3B;
+
+};
+.list-group {
+    margin-left: 10px;
+}
+.card {
+    background-color: black;
 }
