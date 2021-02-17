@@ -1,4 +1,4 @@
-
+/* Below are the properties for the title. */
 .title {
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     color: 	#355E3B;
@@ -7,32 +7,13 @@
     background-color: burlywood;
     align-items: center;
 };
-img {
-    align-items: center;
-}
-
+/* Below are the properties of the card title*/
  .card-title{
     color:black;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
  }
+ /*Below are the properties of the devour button*/
  .change-devour {
     border-radius: 12px;
     background-color:darkseagreen;
  };
-
-div.list-group-item button.delete-burger {
-    border-radius: 12px;
-    background-color:;
-}; 
-
-/* .list-group {
-    background-color: burlywood;
-};
-
-.card {
-    background-color: black;
-}; */
-
-/* html, body {
-    background:burlywood;
-}; */
