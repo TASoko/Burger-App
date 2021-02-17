@@ -1,59 +1,61 @@
 <div class="container">
-    <div class="row">
+    <div class="row banner">
         <div class="col-4"></div>
         <div class="col-5">
             <h1 class="display-4 title">Eat Da Burger!</h1>
             <img src="https://media.giphy.com/media/WBTUlyKBVlTTa/giphy.gif" alt="gif of a burger assembling"
                 width="300" height="200" class="gif">
         </div>
+        <div class="col-3 "></div>
     </div>
-</div>
-</div>
-<!--first card to show eat later-->
-<br><br>
-<div class="container main">
-    <div class="row">
-        <div class="col-4">
-            <div class="card" style="width: 23rem;">
-                <h2 class="card-title">Burgers to Eat Later</h2>
-                <ul class="list-group list-group-flush">
-                    <li class="list-group-item">
-                        {{#each burgers}}
-                        {{#unless devoured}}
-                        {{> burgers/burger-block}}
-                        <br>
-                        {{/unless}}
-                        {{/each}}
-                    </li>
-                </ul>
-            </div>
-        </div>
-        <!--to submit the burger choice-->
 
-        <div class="col-4">
-            <div class="input-group mb-3">
-                <div class="input-group-prepend">
-                    <span class="input-group-text submit" id="submit" type="submit">Submit</span>
+
+    <!--first card to show eat later-->
+    <br><br>
+    <div class="container main">
+        <div class="row">
+            <div class="col-4">
+                <div class="card" style="width: 23rem; background-color:olivedrab">
+                    <h2 class="card-title">Burgers to Eat Later</h2>
+                    <ul class="list-group list-group-flush">
+                        <li class="list-group-item">
+                            {{#each burgers}}
+                            {{#unless devoured}}
+                            {{> burgers/burger-block}}
+                            <br>
+                            {{/unless}}
+                            {{/each}}
+                        </li>
+                    </ul>
                 </div>
-                <input type="text" class="form-control" aria-label="Default"
-                    aria-describedby="inputGroup-sizing-default" name="burger_name" id="new-burger">
-                <p>Enter a burger you would like to eat then submit</p>
             </div>
-        </div>
-        <!--card to devour-->
-        <div class="col-4">
-            <div class="card" style="width: 23rem;">
-                <h2 class="card-title">Devoured Burgers</h2>
-                <ul class="list-group list-group-flush">
-                    <li class="list-group-item">
-                        {{#each burgers}}
-                        {{#if devoured}}
-                        {{> burgers/burger-block}}
-                        <br>
-                        {{/if}}
-                        {{/each}}
-                    </li>
-                </ul>
+            <!--to submit the burger choice-->
+
+            <div class="col-4">
+                <div class="input-group mb-3">
+                    <div class="input-group-prepend">
+                        <span class="input-group-text submit" id="submit" type="submit">Submit</span>
+                    </div>
+                    <input type="text" class="form-control" aria-label="Default"
+                        aria-describedby="inputGroup-sizing-default" name="burger_name" id="new-burger">
+                    <p>Enter a burger you would like to eat then submit</p>
+                </div>
+            </div>
+            <!--card to devour-->
+            <div class="col-4">
+                <div class="card" style="width: 23rem; background-color:olivedrab;">
+                    <h2 class="card-title">Devoured Burgers</h2>
+                    <ul class="list-group list-group-flush">
+                        <li class="list-group-item">
+                            {{#each burgers}}
+                            {{#if devoured}}
+                            {{> burgers/burger-block}}
+                            <br>
+                            {{/if}}
+                            {{/each}}
+                        </li>
+                    </ul>
+                </div>
             </div>
         </div>
     </div>

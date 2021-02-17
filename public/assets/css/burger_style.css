@@ -1,27 +1,38 @@
+
 .title {
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     color: 	#355E3B;
     font-size: larger;
     margin-top: 50px;
+    background-color: burlywood;
+    align-items: center;
 };
-.main {
-    padding-top: 40px;
-};
-.gif {
-    padding-bottom: 40px;
-    
-};
-#submit{
-    padding: 40px;
-    margin-top: 50px;
+img {
+    align-items: center;
 }
-.card-title{
-    color: 	#355E3B;
 
+ .card-title{
+    color:black;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+ }
+ .change-devour {
+    border-radius: 12px;
+    background-color:darkseagreen;
+ };
+
+div.list-group-item button.delete-burger {
+    border-radius: 12px;
+    background-color:;
+}; 
+
+/* .list-group {
+    background-color: burlywood;
 };
-.list-group {
-    margin-left: 10px;
-}
+
 .card {
     background-color: black;
-}
+}; */
+
+/* html, body {
+    background:burlywood;
+}; */
