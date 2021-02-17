@@ -1,3 +1,4 @@
+//Dependencies
 const express = require('express');
 
 const router = express.Router();
@@ -6,6 +7,7 @@ const router = express.Router();
 const burger = require('../models/burger.js');
 
 // Create all our routes and set up logic within those routes where required.
+// The code below gets our burger data and displays it
 router.get('/', (req, res) => {
   burger.all((data) => {
     const hbsObject = {
@@ -16,13 +18,14 @@ router.get('/', (req, res) => {
   });
 });
 
+//The code below  is the route to posting a new burger. I made devoured false the default in the schema so a user only needs to add a burger name to create a new input.
 router.post('/api/burgers', (req, res) => {
   burger.create(['burger_name'], [req.body.name], (result) => {
     // Send back the ID of the new quote
     res.json(result);
   });
 });
-
+//The code below is to change the state of devoured. The first part grabs the data by it's id then updates its devoured state.
 router.put('/api/burgers/:id', (req, res) => {
   const condition = `id = ${req.params.id}`;
 
@@ -42,7 +45,7 @@ router.put('/api/burgers/:id', (req, res) => {
     }
   );
 });
-
+//The code below is to delete the burger. It grabs the burger by it's id then deletes only that input.
 router.delete('/api/burgers/:id', (req, res) => {
   const condition = `id = ${req.params.id}`;
 
