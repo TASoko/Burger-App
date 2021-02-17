@@ -1,11 +1,13 @@
 <li>
-
+{{!This is a file that controls the name of the burger and the buttons associatedd with them}}
   {{burger_name}} &nbsp;
+  {{!Lines 5-9 say that unless the burger is already devoured give the option of a devour button that will change the state of the burger}}
 {{#unless devoured}}
     <button class="change-devour" data-id="{{id}}" data-newdevoured="{{devoured}}">
       DEVOUR!
     </button>
 {{/unless}}
+{{!The code below means that regardless of if the burger is devoured or not give the user a delete button option. Also the butotn was styled here due to css problems.}}
 &nbsp;
     <button class="delete-burger" data-id="{{this.id}}" style="border-radius: 12px; background-color:#c23b22;">Delete Order!</button>
 
