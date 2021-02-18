@@ -1,5 +1,6 @@
 // Set up MySQL connection.
 const mysql = require('mysql');
+require("dotenv").config(); //This is for the .env file that will hide my password
 var connection;
 
 if (process.env.JAWSDB_URL){
@@ -10,7 +11,7 @@ if (process.env.JAWSDB_URL){
     port: 3306,
     user: 'root',
     // NOTE: Be sure to add your MySQL password here!
-    password: 'MySQLTAS1',
+    password: process.env.PASSWORD,
     database: 'burgers_db',
   })
 }
